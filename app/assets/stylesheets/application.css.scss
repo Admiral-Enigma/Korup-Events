@@ -15,6 +15,14 @@
  */
 
 @import "bootstrap-sprockets";
-@import "bootswatch/journal/variables";
+@import "bootswatch/lumen/variables";
 @import "bootstrap";
-@import "bootswatch/journal/bootswatch";
+@import "bootswatch/lumen/bootswatch";
+
+.event-table {
+  margin-top: 25px;
+}
+
+.table td, .table th {
+    min-width: 100px;
+}
