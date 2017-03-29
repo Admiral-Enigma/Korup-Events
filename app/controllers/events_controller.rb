@@ -8,6 +8,10 @@ class EventsController < ApplicationController
 
   end
 
+  def new
+     
+  end
+
   def show
     @event = Event.find(params[:id])
   end

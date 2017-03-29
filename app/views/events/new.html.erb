@@ -1,0 +1,24 @@
+<h1>Indsend din begivenhed!</h1>
+<div>
+  <%= form_for @renter do |f| %>
+    <p>Navn</p>
+    <%= f.text_field :name, required: true %> <br>
+    <p>Adresse</p>
+    <%= f.text_field :address, required: true %> <br>
+    <p>By navn og postnummer</p>
+    <%= f.text_field :cityname, required: true %> <br>
+    <p>Email</p>
+    <%= f.text_field :email, required: true%> <br>
+    <p>Telefon nummer</p>
+    <%= f.text_field :number, required: true %> <br>
+    <p>Skriv her lidt om dig selv</p>
+    <%= f.text_area :moreinfo %> <br>
+    <h2>Dine ønsker til bolig</h2><br>
+    <p>Kvadrat meter</p>
+    <%= f.number_field :m2, min: 1 %><br>
+    <br>
+    <%= f.submit "Tilmeld!" %>
+  <% end %>
+  <br>
+  <%= link_to "Tilbage", root_path %>
+</div>
