@@ -1,5 +1,5 @@
+<div class="container">
 <h1>Indsend din begivenhed!</h1>
-<div>
   <%= form_for @event do |f| %>
     <h3>Lidt om dig</h3>
     <p>Navn</p>
@@ -7,9 +7,17 @@
     <p>Email</p>
     <%= f.text_field :contact_email, required: true%> <br>
     <p>Telefon nummer</p>
-    <%= f.text_field :contact_number, required: true %> <br>
+    <%= f.text_field :contact_number %> <br>
+    <h3>Skriv her lidt om din begivenhed</h3><br>
+    <p>Title på din begivenhed</p>
+    <%= f.text_field :title, required: true %><br>
+    <p>Og her skriver du lidt om din begivenhed</p>
+    <%= f.text_area :more_info_heading, required: true %><br>
+    <p>Dato (DD/MM/ÅÅ)</p>
+    <%= f.text_field :date, required: true %><br>
+    <p>Pris pr person</p>
+    <%= f.number_field :price, required: true, min: 0 %><br>
 
-    <h3>Skriv her lidt om din begivenhed</h3>
     <br>
     <%= f.submit "Tilmeld!" %>
   <% end %>
