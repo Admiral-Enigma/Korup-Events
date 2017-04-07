@@ -12,14 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170329161645) do
 
-  create_table "contacts", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
-    t.integer  "number"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "events", force: :cascade do |t|
     t.string   "title"
     t.string   "date"
