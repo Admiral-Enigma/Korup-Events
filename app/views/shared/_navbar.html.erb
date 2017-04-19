@@ -14,9 +14,9 @@
       <ul class="nav navbar-nav ">
         <% if page == "home" %>
           <li class="active"><a href="/" class="event-navbar-content">Hjem <span class="sr-only">(current)</span></a></li>
-          <li><a href="/about">Om</a></li>
+          <li><a href="/about" class="event-navbar-content-nonactive">Om</a></li>
         <% elsif page == "about" %>
-        <li><a href="/">Hjem <span class="sr-only">(current)</span></a></li>
+        <li><a href="/" class="event-navbar-content-nonactive">Hjem <span class="sr-only">(current)</span></a></li>
         <li class="active" ><a href="/about" class="event-navbar-content">Om</a></li>
         <% end %>
       </ul>
