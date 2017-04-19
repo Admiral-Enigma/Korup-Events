@@ -4,10 +4,20 @@
     <meta charset="utf-8">
     <title>Tillykke!</title>
   </head>
-  <body>
-    <div class="container">
-      <h1>Tillykke du har nu indsendt din begivenhed!</h1><br>
-      
+  <body class="congrat">
+    <div class="vertical-center">
+
+      <div class="panel panel-success">
+	  <div class="panel-heading">
+	    <h3 class="panel-title">Tillykke!</h3>
+	  </div>
+	  <div class="panel-body">
+      <h1>Tillykke du har nu indsendt din begivenhed! <br> Din begivnhed vil nu blive checket <br> og efter det vil den være på forsiden</h1><br>
+
+      <%= link_to "Tilbage til forsiden", root_path %>
+	  </div>
+	</div>
+
     </div>
   </body>
 </html>
