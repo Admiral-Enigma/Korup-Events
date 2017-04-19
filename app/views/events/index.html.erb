@@ -1,29 +1,39 @@
-<%= render partial: "shared/navbar", locals: {page: "home"} %>
-<h2>Her er en liste over begivenheder i Korup</h2>
-<table class="table table-striped table-hover event-table">
-  <thead>
-    <tr>
-      <th>#</th>
-      <th>Navn</th>
-      <th>Dato</th>
-      <th>Pris</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @events.each do |event| %>
-      <% if event.accepted == true %>
-      <tr>
-        <td><%= event.id %></td>
-        <td><%= link_to ""+event.title, "/events/"+event.id.to_s %></td>
-        <td><%= event.date %></td>
-        <% if event.price == 0 %>
-          <td>Gratis!</td>
-        <% elsif event.price > 0 %>
-          <td><%= event.price %> kr</td>
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+  <%= render partial: "shared/navbar", locals: {page: "home"} %>
+  <div class="event-table">
+    <h2>Her er en liste over begivenheder i Korup</h2>
+
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr class="info">
+          <th>Navn</th>
+          <th>Dato</th>
+          <th>Pris</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @events.each do |event| %>
+          <% if event.accepted == true %>
+          <tr>
+            <td><%= link_to ""+event.title, "/events/"+event.id.to_s %></td>
+            <td><%= event.date %></td>
+            <% if event.price == 0 %>
+              <td>Gratis!</td>
+            <% elsif event.price > 0 %>
+              <td><%= event.price %> kr</td>
+            <% end %>
+          </tr>
+          <% end %>
         <% end %>
-      </tr>
-      <% end %>
-    <% end %>
-  </tbody>
-</table>
-<h3><%= link_to "Er din begivenhed ikke på listen? så klik her for at indsende det", events_new_path  %></h3>
+      </tbody>
+    </table>
+    <h3><%= link_to "Er din begivenhed ikke på listen? så klik her for at indsende det", events_new_path  %></h3>
+  </div>
+</body>
+</html>
+

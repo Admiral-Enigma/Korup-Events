@@ -1,31 +1,42 @@
 <div class="container">
-
-<div class="row">
-  <div class="col-md-6 col-md">
-    <h1>Indsend din begivenhed!</h1>
-      <%= form_for @event do |f| %>
-        <h3>Lidt om dig</h3>
-        <p>Navn</p>
-        <%= f.text_field :contact_name, required: true, class: 'form-control' %> <br>
-        <p>Email</p>
-        <%= f.text_field :contact_email, required: true, class: 'form-control'%> <br>
-        <p>Telefon nummer</p>
-        <%= f.text_field :contact_number, class: 'form-control' %> <br>
-        <h3>Lidt om din begivenhed</h3><br>
-        <p>Title på din begivenhed</p>
-        <%= f.text_field :title, required: true, class: 'form-control' %><br>
-        <p>Hvad handler din begivenhed om</p>
-        <%= f.text_area :more_info_heading, required: true, class: 'form-control' %><br>
-        <p>Dato (DD/MM/ÅÅ)</p>
-        <%= f.text_field :date, required: true, class: 'form-control' %><br>
-        <p>Pris pr person</p>
-        <%= f.number_field :price, required: true, min: 0, class: 'form-control' %><br>
-
-        <br>
-        <%= f.submit "Indsend!", class: 'btn btn-primary' %>
-      <% end %>
-      <br>
-      <%= link_to "Tilbage", root_path, class: 'btn btn-link' %>
-      </div>
+    <div class="row">
+      <div class="col-md-6 col-md">
+        <h1>Indsend din begivenhed!</h1>
+          <%= form_for @event do |f| %>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Lidt om dig</h3>
+            </div>
+            <div class="panel-body">
+                <p>Navn</p>
+                <%= f.text_field :contact_name, required: true, class: 'form-control' %> <br>
+                <p>Email</p>
+                <%= f.text_field :contact_email, required: true, class: 'form-control'%> <br>
+                <p>Telefon nummer</p>
+                <%= f.text_field :contact_number, class: 'form-control' %> <br>
+            </div>
+           
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">Lidt om din begivenhed</h3>
+            </div>
+            <div class="panel-body">
+                <p>Title på din begivenhed</p>
+                <%= f.text_field :title, required: true, class: 'form-control' %><br>
+                <p>Hvad handler din begivenhed om</p>
+                <%= f.text_area :more_info_heading, required: true, class: 'form-control' %><br>
+                <p>Dato (DD/MM/ÅÅ)</p>
+                <%= f.text_field :date, required: true, class: 'form-control' %><br>
+                <p>Pris pr person</p>
+                <%= f.number_field :price, required: true, min: 0, class: 'form-control' %><br>
+            </div>
+          </div>
+            <br>
+            <%= f.submit "Indsend!", class: 'btn btn-primary' %>
+          <% end %>
+          <br>
+          <%= link_to "Tilbage", root_path, class: 'btn btn-link' %>
+        </div>
     </div>
 </div>
