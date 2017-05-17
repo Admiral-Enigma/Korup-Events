@@ -5,6 +5,12 @@
     <title>Admin</title>
   </head>
   <body>
-
+    <div class="event-table">
+      <h1>Admin siden</h1>
+      <br>
+      <div id="indexTabContent" class="tab-content">
+        <%= render partial: "admin_partials/event_list", locals: {events: @events} %>
+      </div>
+  </div>
   </body>
 </html>
